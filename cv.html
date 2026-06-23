@@ -65,6 +65,12 @@
             color: #008f11;
             margin-bottom: 30px;
         }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .btn {
             display: inline-block;
             border: 1px solid #00ff41;
@@ -74,11 +80,22 @@
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 1px;
+            background: transparent;
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background-color: #00ff41;
             color: #000000;
             box-shadow: 0 0 15px #00ff41;
+        }
+        .btn-secondary {
+            border: 1px solid #008f11;
+            color: #008f11;
+        }
+        .btn-secondary:hover {
+            background-color: #008f11;
+            color: #000000;
+            box-shadow: 0 0 15px #008f11;
         }
     </style>
 </head>
@@ -101,14 +118,24 @@
             <div class="card">
                 <h2>English Profile</h2>
                 <p>Curriculum Vitae detailing cybersecurity training and engineering credentials.</p>
-                <a href="English_cv.pdf" class="btn" target="_blank">Execute EN_CV.pdf</a>
+                <div class="btn-group">
+                    <!-- Target blank opens the file directly in browser tab -->
+                    <a href="English_cv.pdf" class="btn" target="_blank">View EN_CV.pdf</a>
+                    <!-- Download attribute forces file save -->
+                    <a href="English_cv.pdf" class="btn btn-secondary" download="English_cv.pdf">Download PDF</a>
+                </div>
             </div>
 
             <!-- French CV -->
             <div class="card">
                 <h2>Profil Français</h2>
                 <p>Dossier professionnel résumant le parcours académique et compétences techniques.</p>
-                <a href="French_cv.pdf" class="btn" target="_blank">Exécuter FR_CV.pdf</a>
+                <div class="btn-group">
+                    <!-- Target blank opens the file directly in browser tab -->
+                    <a href="French_cv.pdf" class="btn" target="_blank">Voir FR_CV.pdf</a>
+                    <!-- Download attribute forces file save -->
+                    <a href="French_cv.pdf" class="btn btn-secondary" download="French_cv.pdf">Télécharger PDF</a>
+                </div>
             </div>
         </div>
     </div>
