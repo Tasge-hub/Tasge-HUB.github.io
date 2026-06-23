@@ -3,90 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Georgios TASOULIS - CV Vault</title>
+    <title>Georgios Tasoulis - CV Vault</title>
     <style>
         body {
-            background-color: #0a0a0a;
-            color: #00ff41;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
-
         nav {
-            background: rgba(26, 26, 26, 0.95);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            background-color: #0a0a0a;
             border-bottom: 2px solid #00ff41;
+            padding: 15px;
             text-align: center;
         }
-
         nav a {
             color: #00ff41;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
-            font-size: 0.85rem;
+            margin: 0 20px;
             text-transform: uppercase;
+            font-size: 1rem;
         }
-
         nav a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px #00ff41;
+            color: #ffffff;
+            text-shadow: 0 0 8px #00ff41;
         }
-
         .container {
-            max-width: 900px;
-            margin: 120px auto 50px auto;
-            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-
-        h1, h2 {
-            color: #fff;
+        h1 {
+            color: #00ff41;
+            font-size: 1.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
-
-        .highlight { color: #00ff41; }
-        .dim { color: #008f11; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
+        .dim {
+            color: #008f11;
         }
-
+        .card-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
         .card {
-            background: #111;
             border: 1px solid #00ff41;
-            padding: 25px;
-            border-radius: 4px;
+            background-color: #050505;
+            padding: 30px;
+            flex: 1;
             text-align: center;
         }
-
+        .card h2 {
+            color: #ffffff;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .card p {
+            color: #008f11;
+            margin-bottom: 30px;
+        }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            color: #00ff41;
             border: 1px solid #00ff41;
+            color: #00ff41;
+            padding: 12px 24px;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: bold;
-            background: transparent;
-            transition: all 0.3s ease;
+            letter-spacing: 1px;
         }
-
         .btn:hover {
-            background: #00ff41;
-            color: #000;
+            background-color: #00ff41;
+            color: #000000;
             box-shadow: 0 0 15px #00ff41;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -94,33 +86,30 @@
 
     <nav>
         <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
         <a href="cv.html">CV Vault</a>
     </nav>
 
     <div class="container">
         <header>
-            <h1>[ <span class="highlight">04. CREDENTIALS_VAULT</span> ]</h1>
-            <p class="dim">// LOADING SYSTEM PROFILE DOCUMENTS...</p>
+            <h1>[ CREDENTIALS_VAULT ]</h1>
+            <p class="dim">// LOADING EXTERNAL PROFILE ATTACHMENTS...</p>
         </header>
 
-        <div class="grid">
-            
-            <!-- ENGLISH PROFILE CARD -->
+        <div class="card-container">
+            <!-- English CV -->
             <div class="card">
                 <h2>English Profile</h2>
-                <p>Full curriculum vitae outlining cybersecurity training and technical certifications.</p>
-                <!-- Direct link to your uploaded file -->
+                <p>Curriculum Vitae detailing cybersecurity training and engineering credentials.</p>
                 <a href="English_cv.pdf" class="btn" target="_blank">Execute EN_CV.pdf</a>
             </div>
 
-            <!-- FRENCH PROFILE CARD -->
+            <!-- French CV -->
             <div class="card">
                 <h2>Profil Français</h2>
-                <p>Dossier professionnel détaillant le parcours académique et compétences en cybersécurité.</p>
-                <!-- Direct link to your uploaded file -->
+                <p>Dossier professionnel résumant le parcours académique et compétences techniques.</p>
                 <a href="French_cv.pdf" class="btn" target="_blank">Exécuter FR_CV.pdf</a>
             </div>
-
         </div>
     </div>
 
