@@ -82,6 +82,7 @@
             letter-spacing: 1px;
             background: transparent;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         .btn:hover {
             background-color: #00ff41;
@@ -119,10 +120,10 @@
                 <h2>English Profile</h2>
                 <p>Curriculum Vitae detailing cybersecurity training and engineering credentials.</p>
                 <div class="btn-group">
-                    <!-- Target blank opens the file directly in browser tab -->
+                    <!-- Standard view tab link -->
                     <a href="English_cv.pdf" class="btn" target="_blank">View EN_CV.pdf</a>
-                    <!-- Download attribute forces file save -->
-                    <a href="English_cv.pdf" class="btn btn-secondary" download="English_cv.pdf">Download PDF</a>
+                    <!-- Forced download link via script -->
+                    <button class="btn btn-secondary" onclick="forceDownload('English_cv.pdf')">Download PDF</button>
                 </div>
             </div>
 
@@ -131,14 +132,34 @@
                 <h2>Profil Français</h2>
                 <p>Dossier professionnel résumant le parcours académique et compétences techniques.</p>
                 <div class="btn-group">
-                    <!-- Target blank opens the file directly in browser tab -->
+                    <!-- Standard view tab link -->
                     <a href="French_cv.pdf" class="btn" target="_blank">Voir FR_CV.pdf</a>
-                    <!-- Download attribute forces file save -->
-                    <a href="French_cv.pdf" class="btn btn-secondary" download="French_cv.pdf">Télécharger PDF</a>
+                    <!-- Forced download link via script -->
+                    <button class="btn btn-secondary" onclick="forceDownload('French_cv.pdf')">Télécharger PDF</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- SCRIPT TO BYPASS BROWSER OPENING SESSIONS AND FORCE SYSTEM FILE DOWNLOAD -->
+    <script>
+        function forceDownload(fileName) {
+            fetch(fileName)
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = fileName;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                })
+                .catch(() => alert('Error executing download stream protocol. Check link paths.'));
+        }
+    </script>
 
 </body>
 </html>
