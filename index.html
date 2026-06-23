@@ -3,169 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Georgios TASOULIS Portfolio</title>
+    <title>Georgios Tasoulis - Home</title>
     <style>
-        /* Global Theme */
         body {
-            background-color: #0a0a0a;
-            color: #00ff41;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
         }
-
-        /* Navigation Bar */
-       <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV Vault</a>
-</nav>
-
-        /* Layout */
-        .container {
-            max-width: 900px;
-            margin: 120px auto 50px auto;
-            padding: 20px;
+        nav {
+            background-color: #0a0a0a;
+            border-bottom: 2px solid #00ff41;
+            padding: 15px;
+            text-align: center;
         }
-
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        h1, h2, h3 {
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .highlight { color: #00ff41; }
-        .dim { color: #008f11; }
-
-        /* Grids & Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background: #111;
-            border: 1px solid #00ff41;
-            padding: 20px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            background: #161616;
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
-        }
-
-        /* Buttons/Links */
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            border: 1px solid #00ff41;
+        nav a {
             color: #00ff41;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
+            margin: 0 20px;
+            text-transform: uppercase;
+            font-size: 1rem;
         }
-
-        .btn:hover {
-            background: #00ff41;
-            color: #000;
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #00ff41;
         }
-
-        /* List Styling */
-        ul { list-style: none; padding: 0; }
-        li::before { content: "> "; color: #00ff41; }
-
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #00ff41;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+        .dim {
+            color: #008f11;
+        }
+        .highlight {
+            color: #00ff41;
+        }
+        .card-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            border: 1px solid #00ff41;
+            background-color: #050505;
+            padding: 20px;
+            flex: 1;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+        a.btn-link {
+            color: #00ff41;
+            text-decoration: none;
+        }
+        a.btn-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#skills">Skills</a>
-        <a href="#certs">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#soft-skills">Soft Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="cv.html">CV Vault</a>
     </nav>
 
     <div class="container">
         <header>
-            <h1>[ <span class="highlight">Georgios TASOULIS introduction page</span> ]</h1>
+            <h1>[ GEORGIOS TASOULIS INTRODUCTION PAGE ]</h1>
             <p class="dim">// INITIALIZING PORTFOLIO_PROTOCOL...</p>
-            <p>Welcome, guest. System ready for inspection.</p>
+            <p class="highlight">Welcome, guest. System ready for inspection.</p>
         </header>
 
-        <section id="skills">
-            <h2>01. Technical_Inventory</h2>
-            <div class="grid">
+        <section style="margin-top: 60px;">
+            <h1>05. ESTABLISH_HANDSHAKE</h1>
+            <p class="dim">Ready to connect? Use the secure links below:</p>
+            <div class="card-container">
                 <div class="card">
-                    <h3>Network Analysis</h3>
-                    <p>Nmap, Scapy, Wireshark</p>
+                    <h3><a href="https://linkedin.com" target="_blank" class="btn-link">LinkedIn Profile</a></h3>
                 </div>
                 <div class="card">
-                    <h3>Operating Systems</h3>
-                    <p>Linux OS, Windows OS</p>
+                    <h3><a href="https://github.com" target="_blank" class="btn-link">GitHub Repository</a></h3>
                 </div>
-                <div class="card">
-                    <h3>Scripting</h3>
-                    <p>Python, PowerShell</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="certs">
-            <h2>02. Credentials_Vault</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Office Expert</h3>
-                    <ul>
-                        <li>Microsoft Word Expert</li>
-                        <li>Microsoft Word</li>
-                        <li>Microsoft PowerPoint</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Specialized</h3>
-                    <ul>
-                        <li>Peer-Mediator Certification</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>03. Project_Deployment</h2>
-            <div class="card">
-                <h3>Portsec</h3>
-                <p>A specialized tool designed for <strong>Ports and Data Flow Analysis</strong>. Focused on identifying network vulnerabilities and visualizing packet movement.</p>
-                <a href="https://github.com/Tasge-hub/Tasge-HUB.github.io/tree/Portsec" class="btn">View Source Code</a>
-            </div>
-        </section>
-
-        <section id="soft-skills">
-            <h2>04. Cognitive_Assets</h2>
-            <ul>
-                <li><strong>Teamwork:</strong> Collaborative approach to problem-solving.</li>
-                <li><strong>Performance:</strong> Remains calm and effective under high-pressure scenarios.</li>
-                <li><strong>Philosophy:</strong> Deeply curious and driven to learn emerging technologies.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>05. Establish_Handshake</h2>
-            <p>Ready to connect? Use the secure links below:</p>
-            <div class="grid">
-                <a href="https://www.linkedin.com/in/georgios-maximos-tasoulis-05aa63387/" class="btn" target="_blank">LinkedIn Profile</a>
-                <a href="https://github.com/Tasge-hub/Tasge-HUB.github.io" class="btn" target="_blank">GitHub Repository</a>
             </div>
         </section>
     </div>
